@@ -1,0 +1,38 @@
+/* Breadcrumbs */
+.breadcrumb {
+  border: $border-width solid $border-color;
+
+  .breadcrumb-item {
+    font-size: $breadcrumb-font-size;
+
+    &.active {}
+  }
+
+  &.bg-danger,
+  &.bg-dark,
+  &.bg-info,
+  &.bg-primary,
+  &.bg-success,
+  &.bg-warning {
+    border: none;
+
+    .breadcrumb-item {
+      color: $white;
+
+      &:before {
+        color: inherit;
+      }
+
+      a,
+      span {
+        color: inherit;
+      }
+    }
+  }
+}
+/* inverse breadcrumb */
+@each $color, $value in $theme-colors {
+  .bg-inverse-#{$color} {
+    @include breadcrumb-inverse-variant($value);
+  }
+}

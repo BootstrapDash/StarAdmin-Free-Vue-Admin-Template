@@ -1,0 +1,24 @@
+// Solid tab variations
+@mixin tab-solid-variant($color) {
+  .nav-link {
+    &.active {
+      background: $color;
+    }
+  }
+}
+// Minimal tab variations
+@mixin tab-minimal-variant($color) {
+  .nav-tabs {
+    .nav-item {
+      .nav-link {
+        &.active {
+          color: $color;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    border-color: $color;
+  }
+}
