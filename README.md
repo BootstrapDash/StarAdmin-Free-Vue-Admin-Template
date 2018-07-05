@@ -9,7 +9,7 @@ This remarkably flexible and highly customizable template helps you create an am
 
 ## Demo
 
-Visit: https://www.bootstrapdash.com/product/star-admin-free/
+Visit: https://www.bootstrapdash.com/demo/star-admin-vue/
 
 [![N|Solid](screenshot.jpg)](http://www.bootstrapdash.com/demo/star-admin-vue)
 
