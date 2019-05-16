@@ -36,7 +36,7 @@ StarAdmin-Free-Vue-Admin-Template/
 $ git clone https://github.com/BootstrapDash/StarAdmin-Free-Vue-Admin-Template.git
 
 # go into app's directory
-$ cd StarAdmin-Free-Vue-Admin-Template
+$ cd StarAdmin-Free-Vue-Admin-Template/source/
 
 # install dependencies
 npm install
