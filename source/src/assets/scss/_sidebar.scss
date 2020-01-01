@@ -247,6 +247,7 @@
     -webkit-transition: all 0.25s ease-out;
     -o-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
+    box-shadow: -5px 0 10px 0 #eee;
 
     &.active {
       right: 0;

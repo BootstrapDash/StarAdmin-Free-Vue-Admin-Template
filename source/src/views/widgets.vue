@@ -6,7 +6,7 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title mb-0">Statistics</h4>
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center flex-wrap">
             <div class="d-inline-block pt-3">
               <div class="d-flex">
                 <h2 class="mb-0">$10,200</h2>
@@ -17,7 +17,7 @@
               </div>
               <small class="text-gray">Raised from 89 orders.</small>
             </div>
-            <div class="d-inline-block">
+            <div class="d-inline-block mt-2 mt-xl-0">
               <div class="bg-success px-4 py-2 rounded">
                 <i class="mdi mdi-buffer text-white icon-lg"></i>
               </div>
@@ -30,7 +30,7 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title mb-0">Daily Order</h4>
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center flex-wrap">
             <div class="d-inline-block pt-3">
               <div class="d-flex">
                 <h2 class="mb-0">$2256</h2>
@@ -41,7 +41,7 @@
               </div>
               <small class="text-gray">hey, let’s have lunch together</small>
             </div>
-            <div class="d-inline-block">
+            <div class="d-inline-block mt-2 mt-xl-0">
               <div class="bg-warning px-4 py-2 rounded">
                 <i class="mdi mdi-wallet text-white icon-lg"></i>
               </div>
@@ -55,12 +55,12 @@
     <div class="col-md-4 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <div class="d-flex flex-row">
-            <img src="../../src/assets/images/faces/face11.jpg" class="img-lg rounded"/>
-            <div class="ml-3">
-              <h6>Maria</h6>
-              <p class="text-muted">maria@gmail.com</p>
-              <p class="mt-2 text-success font-weight-bold">Designer</p>
+          <div class="d-sm-flex flex-row flex-wrap text-center text-sm-left align-items-center">
+            <img src="../assets/images/faces/face11.jpg" class="img-lg rounded" alt="profile image"/>
+            <div class="ml-sm-3 ml-md-0 ml-xl-3 mt-2 mt-sm-0 mt-md-2 mt-xl-0">
+              <h6 class="mb-0">Maria</h6>
+              <p class="text-muted mb-1">maria@gmail.com</p>
+              <p class="mb-0 text-success font-weight-bold">Designer</p>
             </div>
           </div>
         </div>
@@ -69,12 +69,12 @@
     <div class="col-md-4 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <div class="d-flex flex-row">
-            <img src="../../src/assets/images/faces/face9.jpg" class="img-lg rounded"/>
-            <div class="ml-3">
-              <h6>Thomas Edison</h6>
-              <p class="text-muted">thomas@gmail.com</p>
-              <p class="mt-2 text-success font-weight-bold">Developer</p>
+          <div class="d-sm-flex flex-row flex-wrap text-center text-sm-left align-items-center">
+            <img src="../assets/images/faces/face9.jpg" class="img-lg rounded" alt="profile image"/>
+            <div class="ml-sm-3 ml-md-0 ml-xl-3 mt-2 mt-sm-0 mt-md-2 mt-xl-0">
+              <h6 class="mb-0">Thomas Edison</h6>
+              <p class="text-muted mb-1">thomas@gmail.com</p>
+              <p class="mb-0 text-success font-weight-bold">Developer</p>
             </div>
           </div>
         </div>
@@ -83,12 +83,12 @@
     <div class="col-md-4 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <div class="d-flex flex-row">
-            <img src="../../src/assets/images/faces/face12.jpg" class="img-lg rounded"/>
-            <div class="ml-3">
-              <h6>Edward</h6>
-              <p class="text-muted">edward@gmail.com</p>
-              <p class="mt-2 text-success font-weight-bold">Tester</p>
+          <div class="d-sm-flex flex-row flex-wrap text-center text-sm-left align-items-center">
+            <img src="../assets/images/faces/face12.jpg" class="img-lg rounded" alt="profile image"/>
+            <div class="ml-sm-3 ml-md-0 ml-xl-3 mt-2 mt-sm-0 mt-md-2 mt-xl-0">
+              <h6 class="mb-0">Edward</h6>
+              <p class="text-muted mb-1">edward@gmail.com</p>
+              <p class="mb-0 text-success font-weight-bold">Tester</p>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@
           <div class="d-flex flex-row align-items-top">
             <i class="mdi mdi-facebook text-facebook icon-md"></i>
             <div class="ml-3">
-              <h6 class="text-facebook">2.62 Subscribers</h6>
+              <h6 class="text-facebook">2k Subscribers</h6>
               <p class="mt-2 text-muted card-text">You main list growing</p>
             </div>
           </div>
@@ -149,12 +149,12 @@
             <img class="img-sm rounded-circle" src="../../src/assets/images/faces/face4.jpg" alt="">
             <div class="wrapper w-100 ml-3">
               <p class="mb-0"><b>Dobrick </b>posted in Material</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <div class="d-flex align-items-center">
                   <i class="mdi mdi-clock text-muted mr-1"></i>
                   <p class="mb-0">That's awesome!</p>
                 </div>
-                <small class="text-muted ml-auto">2 hours ago</small>
+                <small class="text-muted ml-xl-auto">2 hours ago</small>
               </div>
             </div>
           </div>
@@ -162,12 +162,12 @@
             <img class="img-sm rounded-circle" src="../../src/assets/images/faces/face5.jpg" alt="">
             <div class="wrapper w-100 ml-3">
               <p class="mb-0"><b>Stella </b>posted in Material</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <div class="d-flex align-items-center">
                   <i class="mdi mdi-clock text-muted mr-1"></i>
                   <p class="mb-0">That's awesome!</p>
                 </div>
-                <small class="text-muted ml-auto">3 hours ago</small>
+                <small class="text-muted ml-xl-auto">3 hours ago</small>
               </div>
             </div>
           </div>
@@ -175,12 +175,12 @@
             <img class="img-sm rounded-circle" src="../../src/assets/images/faces/face7.jpg" alt="">
             <div class="wrapper w-100 ml-3">
               <p class="mb-0"><b>Peter </b>posted in Material</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <div class="d-flex align-items-center">
                   <i class="mdi mdi-clock text-muted mr-1"></i>
                   <p class="mb-0">That's Great!</p>
                 </div>
-                <small class="text-muted ml-auto">1 hours ago</small>
+                <small class="text-muted ml-xl-auto">1 hours ago</small>
               </div>
             </div>
           </div>
@@ -188,12 +188,12 @@
             <img class="img-sm rounded-circle" src="../../src/assets/images/faces/face6.jpg" alt="">
             <div class="wrapper w-100 ml-3">
               <p class="mb-0"><b>Nateila </b>posted in Material</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <div class="d-flex align-items-center">
                   <i class="mdi mdi-clock text-muted mr-1"></i>
                   <p class="mb-0">That's awesome!</p>
                 </div>
-                <small class="text-muted ml-auto">1 hours ago</small>
+                <small class="text-muted ml-xl-auto">1 hours ago</small>
               </div>
             </div>
           </div>

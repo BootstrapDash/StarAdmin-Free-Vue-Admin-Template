@@ -16,6 +16,9 @@
     background: $sidebar-light-bg;
     width: $sidebar-width-lg;
     height: $navbar-height;
+    @media(max-width: 991px) {
+      width: $sidebar-width-sm;
+    }    
 
     .navbar-brand {
       color: $white;
@@ -37,10 +40,16 @@
         margin: auto;
         vertical-align: middle;
       }
+      @media(max-width: 991px) {
+        display: none;
+      }
     }
 
     .brand-logo-mini {
       display: none;
+      @media(max-width: 991px) {
+        display: block;
+      }
 
       img {
         width: calc(#{$sidebar-width-icon} - 50px);
@@ -51,11 +60,17 @@
     }
   }
 
-  .navbar-collapse {
+  .navbar-menu-wrapper {
     padding: 0 15px;
     height: $navbar-height;
+    width: calc(100% - #{$sidebar-width-lg});
+    
+    @media(max-width: 991px) {
+      width: calc(100% - #{$sidebar-width-sm});
+    }
 
     .navbar-nav {
+      @include flex-direction(row);
       .nav-item {
         @include display-flex;
         @include align-items(center);
@@ -104,6 +119,13 @@
             -webkit-box-shadow: 0 0 13px -3px rgba(0,0,0,0.10);
             -moz-box-shadow: 0 0 13px -3px rgba(0,0,0,0.10);
             box-shadow: 0 0 13px -3px rgba(0,0,0,0.10);
+            position: absolute;            
+            font-size: 0.9rem;
+            margin-top: 0;
+            right: 0;
+            left: auto;
+            top: $navbar-height;
+            
             .dropdown-item {
               @extend .d-flex;
               @extend .align-items-center;
@@ -117,11 +139,13 @@
               }
 
               .badge {
-                margin-left: 2.5rem;
+                @extend .ml-3;
+                @extend .d-none;
+                @extend .d-sm-block;
 
                 .rtl & {
-                  margin-left: 0;
-                  margin-right: 1.25rem;
+                  @extend .ml-0;
+                  @extend .mr-3;
                 }
               }
 
@@ -146,6 +170,15 @@
               }
             }
           }
+          @media (max-width: 991px) {
+            position: static;
+            .dropdown-menu {
+              left: 20px;
+              right: 20px;
+              top: $navbar-height;
+              width: calc(100% - 40px);
+            }
+          }
         }
       }
 
@@ -161,6 +194,7 @@
             font-size: $default-font-size;
             padding: 16px 25px;
             @include display-flex;
+            @include align-items(center);
 
             &.active {
               background: rgba($white,0.3);
@@ -177,6 +211,17 @@
             }
           }
         }
+      }
+    }
+
+    .navbar-toggler-right {
+      border: 0;
+      padding: 0 0.5rem;
+      span {
+        color: $white;
+      }
+      @media(max-width: 991px) {
+        display: block;
       }
     }
   }
