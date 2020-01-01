@@ -14,7 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "bootstrap": "4.0.0",
+    "bootstrap": "4.4.1",
     "bootstrap-vue": "2.0.0-rc.1",
     "compass-mixins": "0.12.10",
     "flag-icon-css": "2.9.0",
