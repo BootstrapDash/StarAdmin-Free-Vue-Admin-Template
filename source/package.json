@@ -22,7 +22,8 @@
     "mdi": "2.1.19",
     "vue": "^2.5.2",
     "vue-md-date-picker": "1.0.15",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -91,7 +92,7 @@
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^3.6.0",
-    "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-bundle-analyzer": "^3.7.0",
     "webpack-dev-server": "^2.11.5",
     "webpack-merge": "^4.2.1"
   },
