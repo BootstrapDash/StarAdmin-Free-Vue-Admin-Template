@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "bootstrap-vue": "2.0.0-rc.1",
+    "bootstrap-vue": "2.16.0",
     "compass-mixins": "0.12.10",
     "flag-icon-css": "2.9.0",
     "font-awesome": "4.7.0",
