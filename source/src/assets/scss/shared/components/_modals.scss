@@ -1,0 +1,30 @@
+/* Modals */
+.modal {
+  .modal-dialog {
+    .modal-content {
+      background: lighten($card-bg, 4%);
+
+      .modal-header {
+        padding: $modal-header-padding-y $modal-header-padding-x;
+        border-bottom: 1px solid $border-color;
+
+        .close {
+          span {
+            font-size: 20px;
+            font-weight: 400;
+            color: #6a6a6a;
+          }
+        }
+      }
+
+      .modal-body {
+        padding: $modal-body-padding-y $modal-body-padding-x;
+      }
+
+      .modal-footer {
+        padding: $modal-footer-padding-y $modal-footer-padding-x;
+        border-top: 1px solid $border-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+/* Pagination */
+
+.pagination {
+  .page-item {
+    .page-link {
+      border-color: $border-color;
+      color: $body-color;
+      font-size: 0.875rem;
+      transition-duration: 0.3s;
+      background: lighten($card-bg, 4%);
+
+      &:focus {
+        background: inherit;
+      }
+
+      i {
+        &:before {
+          font-size: inherit;
+          line-height: 1;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      .page-link {
+        background: theme-color("primary");
+        border-color: theme-color("primary");
+        color: color(white);
+      }
+    }
+  }
+
+  &.flat {
+    .page-item {
+      .page-link {
+        border: none;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &.separated {
+    .page-item {
+      margin-left: 2px;
+      margin-right: 2px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .page-link {
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &.rounded {
+    .page-item {
+      .page-link {}
+
+      &:first-child {
+        .page-link {
+          border-radius: 25px 0 0 25px;
+        }
+      }
+
+      &:last-child {
+        .page-link {
+          border-radius: 0 25px 25px 0;
+        }
+      }
+    }
+  }
+
+  &.rounded-flat {
+    .page-item {
+      margin-right: 3px;
+      margin-left: 3px;
+
+      .page-link {
+        border: none;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  &.rounded-separated {
+    .page-item {
+      margin-left: 2px;
+      margin-right: 2px;
+
+      &:first-child {
+        margin-left: 0;
+
+        .page-link {
+          border-radius: 10px 0 0 10px;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        .page-link {
+          border-radius: 0 10px 10px 0;
+        }
+      }
+
+      .page-link {
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+/* pagination variations */
+
+@each $color,
+$value in $theme-colors {
+  .pagination-#{$color} {
+    @include pagination-variants($value);
+  }
+}

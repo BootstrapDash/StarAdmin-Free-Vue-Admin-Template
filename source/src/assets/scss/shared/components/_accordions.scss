@@ -1,0 +1,295 @@
+/* Accordions */
+
+.accordion {
+  .card {
+    margin-bottom: 15px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+
+    .card-header {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      font-size: 14px;
+
+      a {
+        display: block;
+        padding: 0.75rem 1.70rem 0.75rem 1.25rem;
+        background: lighten($card-bg, 4%);
+        color: $body-color;
+        text-decoration: none;
+        font-size: $default-font-size;
+        position: relative;
+        font-weight: 600;
+        transition-property: border-color, background;
+        transition-duration: 0.5s;
+        @include ellipsor;
+
+        &:before {
+          font-family: "Material Design Icons";
+          position: absolute;
+          right: 8px;
+          top: 16px;
+          font-size: 16px;
+          display: block;
+          font-weight: 500;
+          color: $body-color;
+        }
+
+        .card-icon {
+          margin-right: 15px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .card-body {
+      font-size: 0.88rem;
+      padding: 12px 20px 26px;
+
+      i {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &.basic-accordion {
+    .card {
+      .card-header {
+        a {
+          &[aria-expanded="true"] {
+            background: lighten($card-bg, 8%);
+
+            &:before {
+              content: "\F374";
+            }
+          }
+
+          &[aria-expanded="false"] {
+            &:before {
+              content: "\F415";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.accordion-multiple-outline {
+    .card {
+      &:nth-child(5n+1) {
+        @include accordion-multiple-outline-variant(info);
+      }
+
+      &:nth-child(5n+2) {
+        @include accordion-multiple-outline-variant(success);
+      }
+
+      &:nth-child(5n+3) {
+        @include accordion-multiple-outline-variant(primary);
+      }
+
+      &:nth-child(5n+4) {
+        @include accordion-multiple-outline-variant(warning);
+      }
+
+      &:nth-child(5n+5) {
+        @include accordion-multiple-outline-variant(danger);
+      }
+
+      .card-header {
+        a {
+          &[aria-expanded="true"] {
+            &:before {
+              content: "\F143";
+            }
+          }
+
+          &[aria-expanded="false"] {
+            &:before {
+              content: "\F140";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.accordion-multiple-filled {
+    .card {
+      overflow: hidden;
+
+      &:nth-child(5n+1) {
+        @include accordion-multiple-filled-variant(info);
+      }
+
+      &:nth-child(5n+2) {
+        @include accordion-multiple-filled-variant(success);
+      }
+
+      &:nth-child(5n+3) {
+        @include accordion-multiple-filled-variant(primary);
+      }
+
+      &:nth-child(5n+4) {
+        @include accordion-multiple-filled-variant(warning);
+      }
+
+      &:nth-child(5n+5) {
+        @include accordion-multiple-filled-variant(danger);
+      }
+
+      .card-header {
+        a {
+          padding-left: 2.5rem;
+          padding-right: 1rem;
+          color: $white;
+          font-weight: 300;
+
+          &:before {
+            left: 10px;
+            right: unset;
+            top: 12px;
+            color: $white;
+          }
+
+          &[aria-expanded="true"] {
+            &:before {
+              content: "\F143";
+            }
+          }
+
+          &[aria-expanded="false"] {
+            &:before {
+              content: "\F140";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.accordion-solid-bg {
+    .card {
+      background: theme-color(light);
+
+      .card-header {
+        a {
+          color: theme-color(info);
+          font-weight: 400;
+
+          &:before {
+            top: 12px;
+            color: theme-color(info);
+          }
+
+          &[aria-expanded="true"] {
+            background: theme-color(light);
+
+            &:before {
+              content: "\F143";
+            }
+          }
+
+          &[aria-expanded="false"] {
+            background: $white;
+
+            &:before {
+              content: "\F140";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.accordion-body-filled {
+    .card {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      margin-bottom: 0;
+
+      .card-header {
+        a {
+          padding: 23px 10px 23px 2.5rem;
+          font-weight: 300;
+
+          &:before {
+            right: unset;
+            left: 8px;
+            top: 22px;
+            font-size: 24px;
+            transition-duration: 0.3s;
+            transition-property: color;
+          }
+
+          &[aria-expanded="true"] {
+            &:before {
+              content: "\F376";
+              color: theme-color(primary);
+            }
+          }
+
+          &[aria-expanded="false"] {
+            &:before {
+              content: "\F417";
+              color: theme-color(secondary);
+            }
+          }
+        }
+      }
+
+      .card-body {
+        background: theme-color(primary);
+        color: $white;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &.accordion-minimal {
+    .card {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      margin-bottom: 0;
+
+      .card-header {
+        a {
+          padding: 23px 20px;
+          transition-duration: 0.4s;
+          transition-property: font-weight;
+
+          &[aria-expanded="true"] {
+            font-weight: 600;
+          }
+
+          &[aria-expanded="false"] {
+            font-weight: 300;
+          }
+        }
+      }
+
+      .card-body {
+        padding: 30px 0;
+      }
+    }
+  }
+}
+
+/* inverse buttons */
+
+@each $color,
+$value in $theme-colors {
+  .accordion-inverse-#{$color} {
+    @include accordion-inverse-variant($value);
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .accordion-outline-#{$color} {
+    @include accordion-outline-variant($value);
+  }
+}

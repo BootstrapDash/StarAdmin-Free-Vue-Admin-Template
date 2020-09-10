@@ -1,0 +1,207 @@
+/* Full Calendar */
+
+.fc.fc-unthemed  {
+  background: #000;
+  .fc-header-toolbar {
+    background: $white;
+    padding: 28px 0 80px;
+    margin-bottom: 0;
+
+    .fc-button-group {
+      border-radius: 5px;
+
+      .fc-button {
+        box-shadow: none;
+        padding: 1px 12px;
+        margin-right: 0;
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 1.33;
+        border: none;
+        background: theme-color(primary);
+        color: $white;
+        text-shadow: none;
+        transition-duration: 0.3s;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+
+        &.fc-state-active {
+          background: darken(theme-color(primary), 5%);
+          color: $white;
+        }
+
+        &.fc-next-button,
+        &.fc-prev-button {
+          background: $white;
+          color: theme-color(primary);
+          margin-right: 7px;
+          height: 2.0625rem;
+          width: 2.25rem;
+          border: none;
+
+          span {
+            top: -3px;
+            right: 9px;
+
+            &:after {
+              font: normal normal normal 24px/1 "Material Design Icons";
+              display: block;
+              line-height: 21px;
+            }
+          }
+        }
+
+        &.fc-prev-button {
+          span {
+            &:after {
+              content: "\F141";
+            }
+          }
+        }
+
+        &.fc-next-button {
+          span {
+            &:after {
+              content: "\F142";
+            }
+          }
+        }
+      }
+    }
+
+    .fc-today-button {
+      box-shadow: none;
+      padding: 1px 12px;
+      border-radius: 2px;
+      margin-right: 4px;
+      font-size: 0.9375rem;
+      font-weight: 400;
+      line-height: 1.33;
+      border: none;
+      background: theme-color(primary);
+      color: $white;
+      text-shadow: none;
+      transition-duration: 0.3s;
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .fc-center {
+      h2 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .fc-view-container {
+    .fc-view {
+      background: $content-bg;
+
+      table {
+        thead.fc-head {
+          border: none;
+
+          tr {
+            td {
+              .fc-widget-header {
+                border: none;
+
+                table {
+                  thead {
+                    border: none;
+
+                    tr {
+                      th.fc-day-header {
+                        text-transform: uppercase;
+                        padding: 0.4375rem 0;
+                        border-color: $border-color;
+                        font-size: $default-font-size;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.fc-head-container {
+                border-color: #f7f7f7;
+                border-bottom: none;
+              }
+            }
+          }
+        }
+
+        tbody.fc-body {
+          background: $white;
+
+          tr {
+            td.fc-widget-content {
+              border-color: $border-color;
+
+              .fc-day-grid-container {
+                .fc-day-grid {
+                  .fc-row {
+                    border-color: $border-color;
+
+                    .fc-bg {
+                      table {
+                        tr {
+                          td {
+                            border-color: $border-color;
+                          }
+                        }
+                      }
+                    }
+
+                    .fc-content-skeleton {
+                      table {
+                        thead {
+                          tr {
+                            td.fc-day-top {
+                              padding: 8px;
+                              font-size: $default-font-size;
+                              font-weight: 600;
+                            }
+                          }
+                        }
+
+                        tbody {
+                          tr {
+                            td {
+                              &.fc-event-container {
+                                .fc-h-event {
+                                  background: theme-color(success);
+                                  border: none;
+                                  padding: 6px 12px 6px 22px;
+                                  font-weight: 500;
+                                  color: $white;
+                                  @extend .text-small;
+                                  border-radius: 4px;
+                                }
+                              }
+
+                              &.fc-more-cell {
+                                font-weight: 600;
+                                color: theme-color(dark);
+                                padding: 0 7px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

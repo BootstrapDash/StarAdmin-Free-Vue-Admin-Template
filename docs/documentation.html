@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Star Admin Pro Vue Template</title>
+  <link href="documentation.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="left-panel">
+    <h4 class="logo">Star Admin</h4>
+    <h6 class="title-label">Introduction</h6>
+    <ul class="left-menu">
+      <li><a href="#gettingstarted">Getting Started</a></li>
+      <li><a href="#filestructure">File Structure</a></li>
+    </ul>
+
+    <h6 class="title-label mg-t-40">HTML Structure</h6>
+    <ul class="left-menu">
+      <li><a href="#headerpanel">Header Panel</a></li>
+      <li><a href="#leftbar">Left Sidebar</a></li>
+      <li><a href="#footer">Footer</a></li>
+      <li><a href="#mainpanel">Main Panel</a></li>
+    </ul>
+
+    <h6 class="title-label mg-t-40">Other Information</h6>
+    <ul class="left-menu">
+      <li><a href="#changelog">Changelog</a></li>
+      <li><a href="#support">Customer Support</a></li>
+    </ul>
+
+    <br><br>
+  </div><!-- left-panel -->
+
+
+  <div class="main-wrapper">
+    <div class="main-panel">
+      <h1 id="gettingstarted" class="section-title">Documentation</h1>
+      <p>Thank you so much for purchasing our theme. If you have any questions that are beyond the scope of this help
+        file, please feel free to email us at <a href="mailto:support@bootstrapdash.com">support@bootstrapdash.com</a>.
+        Thanks
+        so much!</p>
+
+      <h2 class="section-subtitle">Introduction</h2>
+
+      <p>StarAdmin Vue, a premium dashboard and app template using flat and minimal design. It is fully responsive
+        built with Bootstrap 4. It includes a huge collection of reusable
+        UI components using a very reusable style classes that increases the speed of page time load. It can be used
+        for most type of dashboard. Amazing flexibility and reusability.</p>
+
+      <h2 class="section-subtitle">Getting Started</h2>
+      <p>This part of the doc will help you to quick start your project and will give you a basic idea about how
+        StarAdmin works.</p>
+
+      <h2 class="section-subtitle" id="filestructure">What's In The Box</h2>
+      <p>Once you have download the package you will see the following folder structure inside the folder.</p>
+      <div class="pre-wrapper">
+        <pre>
+StarAdmin Pro Vue Admin Template/
+├── build/
+├── config/\
+├── src
+├── static
+├── test
+├── .babelrc
+├── .editorconfig
+├── .eslintignore
+├── .eslintrc.js
+├── .postcssrc.js
+├── index.html
+├── package.json
+├── README.md
+        </pre>
+      </div><!-- pre-wrapper -->
+
+      <h2 class="section-subtitle" id="buildsetup">Build Setup</h2>
+      <p>Once you have download the package you will see files that you might not familiar along with the folders
+        listed above.</p>
+      <ul>
+        <li>Install Nodejs from <a href="https://nodejs.org/" target="_blank">Nodejs Official Page</a></li>
+        <li>Open your terminal and navigate to the project</li>
+        <li>Run <code>npm install</code> for the root directory of your project folder to install dependencies</li>
+        <li>Run <code>npm run dev</code> to start a local development server</li>
+        <li>A new tab will be opened in your browser</li>
+      </ul>
+      <p>You can also run additional npm tasks such as</p>
+      <ul>
+        <li><code>npm run build</code> build for production with minification</li>
+        <li><code>npm test</code> to run unit tests</li>
+        <li><code>npm run lint</code> to run linting.</li>
+      </ul>
+
+      <hr id="bootstrap">
+
+      <h1 class="section-title">Bootstrap</h1>
+      <p>We use BootstrapVue on top of Bootstrap. BootstrapVue provides one of the most comprehensive implementations
+        of Bootstrap V4 components and grid system available for Vue.js.</p>
+      <p>To learn more about BootstrapVue, visit their site at <a href="https://bootstrap-vue.js.org/" target="_blank">https://bootstrap-vue.js.org/</a></p>
+      <br>
+
+      <hr>
+
+      <h1 class="section-title">HTML Structure</h1>
+
+      <h2 class="section-subtitle" id="headerpanel">Header Panel</h2>
+      <p>Below is the HTML structure of the header of StarAdmin template.</p>
+      <pre class="pre-wrapper">
+&lt;b-navbar id="template-header" class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row" toggleable="md"&gt;
+  &lt;div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center"&gt;
+    &lt;router-link class="navbar-brand brand-logo" to="/"&gt;
+      &lt;img src="assets/images/logo.svg" alt="logo" /&gt;
+    &lt;/router-link&gt;
+    &lt;router-link class="navbar-brand brand-logo-mini" to="/"&gt;
+      &lt;img src="assets/images/logo-mini.svg" alt="logo" /&gt;
+    &lt;/router-link&gt;
+  &lt;/div&gt;
+  &lt;div class="navbar-menu-wrapper d-flex align-items-center ml-auto ml-lg-0"&gt;
+    &lt;button class="navbar-toggler navbar-toggler align-self-center" type="button" @click="collapedSidebar()"&gt;
+      &lt;span class="mdi mdi-menu"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;b-navbar-nav class="navbar-nav navbar-nav-left header-links d-none d-md-flex"&gt;
+      &lt;b-nav-item href="#"&gt;Schedule &lt;span class="badge badge-primary ml-1"&gt;New&lt;/span&gt;&lt;/b-nav-item&gt;
+      &lt;b-nav-item href="#" active&gt;&lt;i class="mdi mdi-elevation-rise"&gt;&lt;/i&gt;Reports&lt;/b-nav-item&gt;
+      &lt;b-nav-item href="#"&gt;&lt;i class="mdi mdi-bookmark-plus-outline"&gt;&lt;/i&gt;Score&lt;/b-nav-item&gt;
+    &lt;/b-navbar-nav&gt;
+    &lt;b-navbar-nav class="navbar-nav-right ml-auto"&gt;
+      &lt;b-nav-item-dropdown right class="preview-list"&gt;
+        &lt;template slot="button-content"&gt;
+          &lt;div class="nav-link count-indicator"&gt;
+            &lt;i class="mdi mdi-file-outline"&gt;&lt;/i&gt;
+            &lt;span class="count"&gt;7&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+        &lt;b-dropdown-item class="preview-header" href="#"&gt;
+          &lt;p class="mb-0 font-weight-medium float-left"&gt;
+            You have 7 unread mails
+          &lt;/p&gt;
+          &lt;span class="badge badge-pill badge-primary float-right"&gt;View all&lt;/span&gt;
+        &lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item class="preview-item"&gt;
+          &lt;div class="preview-thumbnail"&gt;
+            &lt;img src="assets/images/faces/face10.jpg" alt="image" class="img-sm profile-pic" /&gt;
+          &lt;/div&gt;
+          &lt;div class="preview-item-content flex-grow"&gt;
+            &lt;p class="preview-subject ellipsis font-weight-medium text-dark"&gt;
+              Marian Garner
+            &lt;/p&gt;
+            &lt;p class="font-weight-light small-text"&gt;The meeting is cancelled&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item class="preview-item"&gt;
+          &lt;div class="preview-thumbnail"&gt;
+            &lt;img src="assets/images/faces/face12.jpg" alt="image" class="img-sm profile-pic" /&gt;
+          &lt;/div&gt;
+          &lt;div class="preview-item-content flex-grow"&gt;
+            &lt;p class="preview-subject ellipsis font-weight-medium text-dark"&gt;
+              David Grey
+            &lt;/p&gt;
+            &lt;p class="font-weight-light small-text"&gt;The meeting is cancelled&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item class="preview-item"&gt;
+          &lt;div class="preview-thumbnail"&gt;
+            &lt;img src="assets/images/faces/face1.jpg" alt="image" class="img-sm profile-pic" /&gt;
+          &lt;/div&gt;
+          &lt;div class="preview-item-content flex-grow"&gt;
+            &lt;p class="preview-subject ellipsis font-weight-medium text-dark"&gt;
+              Travis Jenkins
+            &lt;/p&gt;
+            &lt;p class="font-weight-light small-text"&gt;The meeting is cancelled&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/b-dropdown-item&gt;
+      &lt;/b-nav-item-dropdown&gt;
+      &lt;b-nav-item-dropdown right class="preview-list"&gt;
+        &lt;template slot="button-content"&gt;
+          &lt;div class="nav-link count-indicator"&gt;
+            &lt;i class="mdi mdi-bell-outline"&gt;&lt;/i&gt;
+            &lt;span class="count bg-success"&gt;4&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+        &lt;b-dropdown-item class="preview-header" href="#"&gt;
+          &lt;p class="mb-0 font-weight-medium float-left"&gt;
+            You have 4 new notifications
+          &lt;/p&gt;
+          &lt;span class="badge badge-pill badge-primary float-right"&gt;View all&lt;/span&gt;
+        &lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item class="preview-item"&gt;
+          &lt;div class="preview-thumbnail"&gt;
+            &lt;i class="mdi mdi-alert m-auto text-primary"&gt;&lt;/i&gt;
+          &lt;/div&gt;
+          &lt;div class="preview-item-content"&gt;
+            &lt;h6 class="preview-subject font-weight-normal text-dark mb-1"&gt;
+              Application Error
+            &lt;/h6&gt;
+            &lt;p class="font-weight-light small-text mb-0"&gt;Just now&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item class="preview-item"&gt;
+          &lt;div class="preview-thumbnail"&gt;
+            &lt;i class="mdi mdi-settings m-auto text-primary"&gt;&lt;/i&gt;
+          &lt;/div&gt;
+          &lt;div class="preview-item-content"&gt;
+            &lt;h6 class="preview-subject font-weight-normal text-dark mb-1"&gt;
+              Settings
+            &lt;/h6&gt;
+            &lt;p class="font-weight-light small-text mb-0"&gt;Private message&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item class="preview-item"&gt;
+          &lt;div class="preview-thumbnail"&gt;
+            &lt;i class="mdi mdi-airballoon m-auto text-primary"&gt;&lt;/i&gt;
+          &lt;/div&gt;
+          &lt;div class="preview-item-content"&gt;
+            &lt;h6 class="preview-subject font-weight-normal text-dark mb-1"&gt;
+              New user registration
+            &lt;/h6&gt;
+            &lt;p class="font-weight-light small-text mb-0"&gt;2 days ago&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/b-dropdown-item&gt;
+      &lt;/b-nav-item-dropdown&gt;
+      &lt;b-nav-item-dropdown right class="preview-list"&gt;
+        &lt;template slot="button-content"&gt;
+          &lt;div class="d-flex align-items-center"&gt;
+            &lt;span class="profile-text d-none d-lg-inline"&gt;Richard V.Welsh !&lt;/span&gt;
+            &lt;img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image" /&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+        &lt;b-dropdown-item class="preview-item profile-actions"&gt;
+          &lt;div class="preview-header"&gt;
+            &lt;div class="py-3 px-4 d-flex align-items-center justify-content-center"&gt;
+              &lt;i class="mdi mdi-bookmark-plus-outline mr-0 text-gray"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class="py-3 px-4 d-flex align-items-center justify-content-center border-left border-right"&gt;
+              &lt;i class="mdi mdi-account-outline mr-0 text-gray"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class="py-3 px-4 d-flex align-items-center justify-content-center"&gt;
+              &lt;i class="mdi mdi-alarm-check mr-0 text-gray"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item&gt;Manage Accounts&lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item&gt;Change Password&lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item&gt;Check Inbox&lt;/b-dropdown-item&gt;
+        &lt;b-dropdown-item&gt;Sign Out&lt;/b-dropdown-item&gt;
+      &lt;/b-nav-item-dropdown&gt;
+    &lt;/b-navbar-nav&gt;
+    &lt;button class="navbar-toggler navbar-toggler-right align-self-center" type="button" @click="collapedMobileSidebar()"&gt;
+      &lt;span class="mdi mdi-menu"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/b-navbar&gt;
+</pre>
+
+      <hr id="leftbar">
+
+      <h2 class="section-subtitle">Left Sidebar</h2>
+      <p>Below is the HTML structure of the left sidebar of StarAdmin template that includes menu and icon menu.</p>
+
+      <pre class="pre-wrapper">
+&lt;nav class="sidebar sidebar-offcanvas" id="sidebar"&gt;
+  &lt;ul class="nav"&gt;
+    &lt;li class="nav-item nav-profile"&gt;
+      &lt;div class="nav-link"&gt;
+        &lt;div class="user-wrapper"&gt;
+          &lt;div class="profile-image"&gt;
+            &lt;img src="assets/images/faces/face8.jpg" alt="profile image"&gt;
+          &lt;/div&gt;
+          &lt;div class="text-wrapper"&gt;
+            &lt;p class="profile-name"&gt;Richard V.Welsh&lt;/p&gt;
+            &lt;div&gt;
+              &lt;small class="designation text-muted"&gt;Manager&lt;/small&gt;
+              &lt;span class="status-indicator online"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class="btn btn-success btn-block"&gt;New Project
+          &lt;i class="mdi mdi-plus"&gt;&lt;/i&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;span class="nav-link" v-b-toggle="'sidebar-dropdown'"&gt;
+        &lt;i class="menu-icon mdi mdi-home"&gt;&lt;/i&gt;
+        &lt;span class="menu-title"&gt;Sidebar Dropdown&lt;/span&gt;
+        &lt;i class="menu-arrow"&gt;&lt;/i&gt;
+      &lt;/span&gt;
+      &lt;b-collapse id="sidebar-dropdown"&gt;
+        &lt;ul class="nav flex-column sub-menu"&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;router-link class="nav-link" to="/Sub_menu_1"&gt;Sub menu 1&lt;/router-link&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;router-link class="nav-link" to="/Sub_menu_2/"&gt;Sub menu 2&lt;/router-link&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/b-collapse&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;router-link class="nav-link" to="/Sidebar_link/"&gt;
+        &lt;i class="menu-icon mdi mdi-home"&gt;&lt;/i&gt;
+        &lt;span class="menu-title"&gt;Sidebar Link&lt;/span&gt;
+      &lt;/router-link&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+      </pre>
+
+      <hr id="footer">
+
+      <h2 class="section-subtitle">Footer Sidebar</h2>
+      <p>Below is the HTML structure of the footer of StarAdmin template.</p>
+
+      <pre class="pre-wrapper">
+&lt;footer class="footer"&gt;
+&lt;div class="container-fluid clearfix"&gt;
+  &lt;span class="text-muted d-block text-center text-sm-left d-sm-inline-block"&gt;Copyright © 2018
+    &lt;a href="http://www.bootstrapdash.com/" target="_blank"&gt;Bootstrapdash&lt;/a&gt;.
+    All rights reserved.&lt;/span&gt;
+  &lt;span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"&gt;Hand-crafted & made with &lt;i class="mdi mdi-heart text-danger"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;/footer&gt;
+&lt;footer class="footer"&gt;
+&lt;div class="container-fluid clearfix"&gt;
+  &lt;span class="text-muted d-block text-center text-sm-left d-sm-inline-block"&gt;Copyright © 2018 &lt;a href="http://www.bootstrapdash.com/"
+      target="_blank"&gt;Bootstrapdash&lt;/a&gt;. All rights reserved.&lt;/span&gt;
+  &lt;span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"&gt;Hand-crafted & made with &lt;i class="mdi mdi-heart text-danger"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;/footer&gt;
+      </pre>
+
+      <hr id="mainpanel">
+
+      <h2 class="section-subtitle">Main Panel</h2>
+      <p>Below is the html structure of the main panel of StarAdmin template that wraps the contents of the page.</p>
+
+      <pre class="pre-wrapper">
+  &lt;section class="main-view"&gt;
+    &lt;div class="container-scroller"&gt;
+      &lt;app-header /&gt;
+      &lt;div class="container-fluid page-body-wrapper"&gt;
+        &lt;app-sidebar /&gt;
+        &lt;div class="main-panel"&gt;
+          &lt;div class="content-wrapper"&gt;
+            &lt;router-view&gt;&lt;/router-view&gt;
+          &lt;/div&gt;
+          &lt;!-- content wrapper ends --&gt;
+          &lt;app-footer /&gt;
+        &lt;/div&gt;
+        &lt;!-- main panel ends --&gt;
+      &lt;/div&gt;
+      &lt;!-- page-body-wrapper ends --&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+      </pre>
+
+      <hr>
+
+      <h2 class="section-subtitle">Elements</h2>
+      <p>Custom styling classes for alerts, buttons, etc. are explained in the live preview of this template. Feel free
+        to use
+        it in your page. Any components that are beyond of this template, may submit a request and suggestion to our
+        email at <a href="mailto:support@boostrapdash.com">support@boostrapdash.com</a></p>
+
+      <hr id="changelog">
+
+      <h1 class="section-title">Changelog</h1>
+
+      <h2>v1.0.1</h2>
+      <ul>
+        <li>Some minor Bugfixes</li>
+      </ul>
+
+      <h2>v1.0.0</h2>
+      <ul>
+        <li>Initial Release</li>
+      </ul>
+
+      <hr id="support">
+
+      <h1 class="section-title">Customer Support</h1>
+      <p>We will assist you any problem you encounter while buidling your dashboard via Star Admin template</p>
+      <p>Email: <a href="mailto:support@bootstrapdash.com">support@bootstrapdash.com</a> </p>
+      <p>We use comment help form found <a href="https://www.bootstrapdash.com/support/">here</a>
+        and email to manage customer support. We will respond to you as quickly as we can. Thank you.</p>
+
+      <br>
+      <hr>
+      <small>&copy; 2019. StarAdmin Documentation. All Rights Reserved. Created by: Bootstrapdash</small>
+
+    </div><!-- main-panel -->
+  </div><!-- main-wrapper -->
+</body>
+
+</htmL>

@@ -1,0 +1,187 @@
+/* Mail Sidebar */
+
+.email-wrapper {
+	.mail-sidebar {
+		@media (max-width: 769px) {
+			position: relative;
+		}
+
+		@media (max-width: $grid-breakpoints-sm) {
+			position: fixed;
+			z-index: 99;
+			background: color(white);
+			width: 45%;
+			min-width: 300px;
+			left: -100%;
+			display: block;
+			transition: 0.4s ease;
+			-webkit-transition: 0.4s ease;
+			-moz-transition: 0.4s ease;
+		}
+
+		.menu-bar {
+			width: 100%;
+			float: right;
+			height: 100%;
+			min-height: 100%;
+
+			@media (max-width: $grid-breakpoints-sm) {
+				min-height: 100vh;
+				max-height: 100%;
+				height: auto;
+				overflow-y: auto;
+				overflow-x: hidden;
+			}
+
+			.menu-items {
+				padding: 0;
+				margin-bottom: 0;
+				height: auto;
+				list-style-type: none;
+
+				li {
+					padding: 10px 15px;
+					transition: 0.4s;
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					&:hover {
+						background: rgba(240, 244, 249, 0.8);
+					}
+
+					a {
+						color: theme-color(dark);
+						font-size: $default-font-size;
+						text-decoration: none;
+
+						i {
+							margin-right: 8px;
+							font-size: $default-font-size;
+							line-height: 1.5;
+						}
+					}
+
+					&.active {
+						background: rgba(theme-color(primary), 0.3);
+						border-radius: 4px;
+
+						a {
+							color: theme-color(primary);
+						}
+					}
+
+					&.compose {
+						&:hover {
+							background: transparent;
+						}
+					}
+				}
+			}
+
+			.online-status {
+				margin-top: 1rem;
+
+				.chat {
+					font-size: $default-font-size;
+					color: $text-muted;
+					margin-bottom: 0;
+					font-family: $type-1;
+				}
+
+				.status {
+					height: 10px;
+					width: 10px;
+					border-radius: 100%;
+					display: inline-flex;
+					justify-content: flex-start;
+					transform: translateX(-43px) translateY(2px);
+
+					&:after {
+						font-size: 12px;
+						color: $text-muted;
+						margin: -5px 0 0 18px;
+					}
+				}
+
+				.status.offline {
+					background: theme-color(danger);
+
+					&:after {
+						content: "Offline";
+					}
+				}
+
+				.status.online {
+					background: theme-color(success);
+
+					&:after {
+						content: "Online";
+					}
+				}
+			}
+
+			.profile-list {
+				padding: 10px 0;
+			}
+
+			.profile-list-item {
+				border-bottom: 1px solid $border-color;
+				padding: 6px 0;
+				display: block;
+
+				&:last-child {
+					border-bottom: 0;
+				}
+
+				a {
+					text-decoration: none;
+					@extend .d-flex;
+
+					.pro-pic {
+						display: flex;
+						align-items: center;
+						padding: 0;
+						width: 20%;
+						max-width: 40px;
+
+						img {
+							max-width: 100%;
+							width: 100%;
+							border-radius: 100%;
+						}
+					}
+
+					.user {
+						width: 100%;
+						@extend .d-flex;
+						@extend .flex-column;
+						padding: 5px 10px 0 15px;
+
+						.u-name {
+							margin: 0;
+							font-family: $type-1;
+							font-size: $default-font-size;
+							line-height: 1;
+							@extend %ellipsor;
+							color: theme-color(dark);
+							font-weight: 500;
+						}
+
+						.u-designation {
+							font-size: calc(#{$default-font-size} - 0.1rem);
+							color: theme-color(dark);
+							@extend %ellipsor;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.sidebar.open {
+		left: 0;
+	}
+}

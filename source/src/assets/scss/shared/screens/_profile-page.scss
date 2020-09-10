@@ -1,0 +1,103 @@
+.profile-page {
+    .profile-header {
+      width: 100%;
+      background: url("assets/images/samples/profile_page/profile_header_banner.jpg") no-repeat center center;
+      background-size: cover;
+      padding: 60px 0;
+      border-radius: 5px;
+      .profile-info {
+        .profile-user-name {
+          margin-bottom: 0;
+          font-family: $type-1;
+          font-weight: 600;
+        }
+        .profile-user-designation {
+          margin-bottom: 0;
+          font-family: $type-1;
+        }
+        .br-wrapper {
+          padding-left: 15px;
+          .br-widget {
+            height: auto;
+            transform: translateY(-5px);
+            a {
+              font-size: 18px;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .details {
+        display: flex;
+        align-items: center;
+        .detail-col {
+          padding-right: 20%;
+          border-right: 1px solid rgba($border-color, 0.3);
+          margin-right: 20%;
+          &:last-child {
+            border-right: none;
+            margin-right: 0;
+          }
+          p {
+            margin-bottom: 0;
+            font-weight: 400;
+            &:first-child {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+    .profile-body {
+      padding-top: 50px;
+      .tab-switch {
+        border-bottom: 1px solid $border-color;
+        .nav-item {
+          .nav-link {
+            color: $text-muted;
+            font-size: 1rem;
+            padding-bottom: 1.2rem;
+            font-weight: 600;
+            border-bottom: 3px solid $white;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in;
+            transition-property: color, border-color;
+            &.active {
+              color: $black;
+              border-bottom: 3px solid theme-color(primary);
+            }
+          }
+        }
+      }
+      .tab-body {
+        border: none;
+        padding: 10px 0;
+        .stages {
+          position: relative;
+          .stage-badge {
+            position: absolute;
+            top: 0;
+            left: -20px;
+          }
+          .file-icon-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .file-icon {
+              height: 77px;
+              width: 69px;
+              padding: 5px;
+              margin-right: 25px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              i {
+                font-size: 43px;
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

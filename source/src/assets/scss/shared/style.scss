@@ -1,0 +1,110 @@
+/*------------------------------------------------------------------
+ [Master Stylesheet]
+
+  Project:	Star Admin Bootstrap Template [Pro Version]
+  Version:	1.0
+-------------------------------------------------------------------*/
+
+
+
+
+/*-------------------------------------------------------------------*/
+/* === Import Bootstrap functions and variables === */
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+
+/*-------------------------------------------------------------------*/
+/* === Import template variables === */
+@import "variables";
+@import "../demo_1/variables";
+
+/*-------------------------------------------------------------------*/
+/* === SCSS Compass Functions === */
+@import "../../../../node_modules/compass-mixins/lib/compass";
+@import "../../../../node_modules/compass-mixins/lib/animate";
+
+/*-------------------------------------------------------------------*/
+/* === Boostrap Main SCSS === */
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+
+/*-------------------------------------------------------------------*/
+/* === Template mixins === */
+@import "mixins/animation";
+@import "mixins/accordions";
+@import "mixins/background";
+@import "mixins/badges";
+@import "mixins/blockqoute";
+@import "mixins/breadcrumbs";
+@import "mixins/buttons";
+@import "mixins/cards";
+@import "mixins/misc";
+@import "mixins/no-ui-slider";
+@import "mixins/pagination";
+@import "mixins/text";
+@import "mixins/popovers";
+@import "mixins/tabs";
+@import "mixins/tooltips";
+
+/*-------------------------------------------------------------------*/
+/* === Core Styles === */
+@import "reset";
+@import "fonts";
+@import "functions";
+@import "typography";
+@import "utilities";
+@import "demo";
+@import "dashboard";
+@import "widgets";
+
+/*-------------------------------------------------------------------*/
+/* === Components === */
+@import "components/accordions";
+@import "components/badges";
+@import "components/bootstrap-progress";
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/cards";
+@import "components/carousel";
+@import "components/checkbox-radio";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/icons";
+@import "components/pagination";
+@import "components/preview";
+@import "components/tables";
+@import "components/todo-list";
+@import "components/lists";
+@import "components/loaders/loaders";
+@import "components/new-account";
+@import "components/timeline/timeline-horizontal";
+@import "components/timeline/timeline-vertical";
+@import "components/portfolio";
+@import "components/pricing-table";
+@import "components/timeline";
+@import "components/product-tile";
+@import "components/chat";
+@import "../demo_1/card";
+@import "../demo_1/dashboard";
+@import "../demo_1/footer";
+@import "../demo_1/nav";
+@import "../demo_1/navbar";
+@import "../demo_1/sidebar";
+@import "../demo_1/misc";
+@import "../demo_1/layouts";
+@import "components/plugin-overrides/full-calendar";
+@import "components/plugin-overrides/date-picker";
+@import "components/plugin-overrides/snotify";
+@import "components/plugin-overrides/chartjs";
+
+/*-------------------------------------------------------------------*/
+/* === Landing screens === */
+@import "screens/auth";
+@import "screens/error";
+@import "screens/profile-page";
+@import "screens/invoice";
+
+@import "components/mail-components/mail-list-container";
+@import "components/mail-components/mail-sidebar";
+@import "components/mail-components/messagecontent";
+
+@import "animation";

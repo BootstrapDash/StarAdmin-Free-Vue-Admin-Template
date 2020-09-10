@@ -1,0 +1,20 @@
+/* Pricing table */
+.pricing-table {
+  .pricing-card {
+    .pricing-card-body {
+      padding: 50px 56px 43px;
+
+      .plan-features {
+        width: 100%;
+        margin-bottom: 32px;
+
+        li {
+          text-align: left;
+          padding: 4px 0;
+          font-family: $type-1;
+          font-size: $default-font-size;
+        }
+      }
+    }
+  }
+}

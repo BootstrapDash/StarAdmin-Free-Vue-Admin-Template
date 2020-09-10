@@ -1,0 +1,128 @@
+#sales-statistics-legend {
+    .chartjs-legend {
+        margin-top: 20px;
+        margin-right: 20px;
+
+        ul {
+            li {
+                color: $body-text-color;
+
+                span {
+                    width: 20px;
+                    height: 3px;
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+}
+
+#net-profit-legend {
+    .chartjs-legend {
+        li {
+            font-weight: 500;
+            color: $body-text-color;
+        }
+    }
+}
+
+.average-price-card {
+    .card {
+        background: $card-accent-color;
+    }
+
+    h3 {
+        margin-bottom: 0;
+    }
+
+    .icon-holder {
+        border-radius: 5px;
+        border: 1px solid $iconholder-primary-border-color;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $iconholder-primary-bg;
+        color: $iconholder-primary-color;
+        font-size: 20px;
+
+        i {
+            line-height: 1;
+        }
+    }
+}
+
+#dashboard-vmap {
+    height: 161px;
+    width: 100%;
+
+    .jvectormap-zoomin,
+    .jvectormap-zoomout {
+        display: none;
+    }
+}
+.proBanner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    .purchase-popup {
+        @extend .grid-margin;
+        background: #000;
+        color: #fff;
+        padding: 15px 20px;
+        @include border-radius(3px);
+
+        .btn {
+        margin-right: 20px;
+        font-weight: 500;
+        color: $white;
+        @include border-radius(5px);
+        @include transition-duration(0.2s);
+
+        &.download-button {
+            background: rgba(249, 249, 249, 0.7);
+            color: #969292;
+            border: 1px solid darken(#e4e4e4,5%);
+        }
+
+        &.purchase-button {
+            background-color: theme-color(info);
+            color: $white;
+            border: none;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        }
+
+        p {
+        margin-bottom: auto;
+        margin-top: auto;
+        color: darken(#e4e4e4,20%);
+        font-weight: 400;
+        vertical-align: middle;
+        line-height: 1;
+        }
+
+        i {
+        vertical-align: middle;
+        line-height: 1;
+        margin: auto 0;
+        color: darken(#e4e4e4,20%);
+        }
+        .bannerClose {
+        cursor: pointer;
+        }
+    }
+    &.hide {
+        display: none;
+    }
+  
+}
+.pro-banner-collapse {
+    .proBanner {
+        display: none;
+    }
+}

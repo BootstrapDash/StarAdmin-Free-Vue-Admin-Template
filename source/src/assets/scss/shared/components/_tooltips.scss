@@ -1,0 +1,40 @@
+/* Tooltips */
+
+.tooltip-static-demo {
+	.tooltip {
+		position: relative;
+		display: inline-block;
+		opacity: 1;
+		margin: 0 10px 10px 0;
+	}
+	.bs-tooltip-bottom-demo,
+	.bs-tooltip-top-demo {
+		.arrow {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.bs-tooltip-left-demo,
+	.bs-tooltip-right-demo {
+		.arrow {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.tooltip {
+	font-size: $tooltip-font-size;
+	min-width: 5.625rem;
+	.tooltip-inner {
+		font-family: $type-1;
+	}
+	z-index: 1029;
+}
+
+@each $color,
+$value in $theme-colors {
+	.tooltip-#{$color} {
+		@include tooltip-variant(theme-color($color));
+	}
+}

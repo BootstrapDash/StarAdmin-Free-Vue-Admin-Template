@@ -1,0 +1,105 @@
+/* Cards */
+
+.card {
+  border: none;
+  background: #fff;
+
+  .card-header {
+    background: lighten($card-bg, 3%);
+    padding: $card-padding-y $card-padding-x;
+    border-bottom: 1px solid $border-color;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    small {
+      margin-bottom: 0px;
+    }
+
+    &.header-sm {
+      padding: 15px $card-padding-x;
+      height: 60px;
+
+      p,
+      .dropdown .dropdown-toggle i {
+        color: $text-muted;
+      }
+    }
+  }
+
+  .card-body {
+    padding: $card-padding-y $card-padding-x;
+
+    &.no-gutter {
+      padding: 0;
+    }
+
+    +.card-body {
+      padding-top: 0;
+    }
+  }
+
+  &.card-outline-success {
+    border: 1px solid theme-color("success");
+  }
+
+  &.card-outline-primary {
+    border: 1px solid theme-color("primary");
+  }
+
+  &.card-outline-warning {
+    border: 1px solid theme-color("warning");
+  }
+
+  &.card-outline-danger {
+    border: 1px solid theme-color("danger");
+  }
+
+  &.card-rounded {
+    border-radius: 5px;
+  }
+
+  &.card-faded {
+    background: #b5b0b2;
+    border-color: #b5b0b2;
+  }
+
+  .card-subtitle {
+    color: rgba($body-color, 0.7);
+  }
+
+  &.card-circle-progress {
+    color: $white;
+    text-align: center;
+  }
+
+  &.bg-blue-gradient {
+    background: linear-gradient(to right, #065efd, #3169fd, #6f79fc);
+    color: #fff;
+  }
+
+  &.bg-orange-gradient {
+    background: linear-gradient(to right, #ff7f2e, #fe7452);
+    color: #fff;
+  }
+
+  &.bg-green-gradient {
+    background: linear-gradient(to right, #24e8a6, #09cdd1);
+    color: #fff;
+  }
+
+  &.card-no-shadow {
+    box-shadow: none;
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .card-inverse-#{$color} {
+    @include card-inverse-variant(rgba(theme-color($color), .2), theme-color-level($color, 1), theme-color-level($color, 3));
+  }
+}

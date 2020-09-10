@@ -1,0 +1,61 @@
+.invoice-page {
+    .invoice-banner {
+        background: url("./assets/images/samples/invoice_banner.jpg") no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 4px;
+        padding: 50px;
+        color: #fff;
+
+        hr {
+            border-top: solid 1px rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    &.invoice-2 {
+        table {
+            width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+
+            tr {
+
+                th,
+                td {
+                    text-align: right;
+                    padding: 25px 10px;
+
+                    &:first-child {
+                        text-align: left;
+                    }
+
+                    &:last-child {
+                        padding-right: 50px;
+                    }
+                }
+
+                th {
+                    font-weight: 400;
+                    color: $text-muted;
+                }
+
+                td {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    @media print {
+
+        .navbar,
+        .sidebar,
+        .footer,
+        .right-sidebar-toggler-wrapper,
+        .btn,
+        .card-title {
+            display: none !important;
+        }
+    }
+}

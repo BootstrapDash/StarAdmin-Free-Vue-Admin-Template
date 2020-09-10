@@ -1,0 +1,92 @@
+/* User Profile */
+
+.user-profile {
+  .side-left {
+    .card {
+      .avatar {
+        img {
+          display: block;
+          width: 90px;
+          height: 90px;
+          border-radius: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          @extend .mt-4;
+          @extend .mb-3;
+        }
+        .name {
+          text-align: center;
+          color: theme-color(dark);
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+        .designation {
+          text-align: center;
+          color: color(gray);
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+        .email {
+          text-align: center;
+          color: theme-color(primary);
+          display: block;
+        }
+        .number {
+          display: block;
+          text-align: center;
+          color: theme-color(primary);
+        }
+      }
+      .overview {
+        .achivements {
+          padding-left: 0;
+          display: flex;
+          justify-content: center;
+          li {
+            width: 33.333%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            p {
+              text-align: center;
+              margin-bottom: 0;
+              font-weight: 600;
+              font-size: 1.4rem;
+              color: theme-color(dark);
+              &:last-child {
+                font-weight: 500;
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+        .about-user {
+          @extend .mb-4;
+          p {
+            font-size: 0.8rem;
+          }
+        }
+        .info-links {
+          a {
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 10px;
+            i {
+              font-size: 0.8rem;
+              margin-right: 10px;
+            }
+            span {
+              text-align: left;
+              display: inline-block;
+            }
+          }
+          .website {}
+          .social-link {}
+        }
+      }
+    }
+  }
+  .side-right {}
+}

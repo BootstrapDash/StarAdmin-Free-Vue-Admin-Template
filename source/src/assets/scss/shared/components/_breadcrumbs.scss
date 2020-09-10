@@ -1,0 +1,108 @@
+/* Breadcrumbs */
+
+.breadcrumb {
+  .breadcrumb-item {
+    font-size: $breadcrumb-font-size;
+
+    &.active {
+      color: rgba($body-color, 0.8);
+    }
+  }
+
+  &.breadcrumb-custom {
+    padding: $breadcrumb-custom-padding-y $breadcrumb-custom-padding-x;
+    border-color: $breadcrumb-item-bg;
+
+    .breadcrumb-item {
+      font-size: $breadcrumb-font-size;
+      background: $breadcrumb-item-bg;
+      padding: $breadcrumb-custom-item-padding-y $breadcrumb-custom-item-padding-x;
+      color: $body-color;
+      display: inline-block;
+      vertical-align: top;
+
+      &.active {
+        color: $body-color;
+      }
+
+      &:last-child {
+        background: transparent;
+      }
+
+      &:before {
+        content: "";
+      }
+
+      a {
+        position: relative;
+        color: inherit;
+        border: 1px solid $breadcrumb-item-bg;
+        display: inline-block;
+        vertical-align: top;
+
+        &:after,
+        &:before {
+          position: absolute;
+          top: -9px;
+          width: 0;
+          height: 0;
+          content: "";
+          border-top: 21px solid transparent;
+          border-bottom: 21px solid transparent;
+        }
+
+        &:before {
+          right: -22px;
+          z-index: 3;
+          border-left-color: $breadcrumb-item-bg;
+          border-left-style: solid;
+          border-left-width: 12px;
+        }
+
+        &:after {
+          border-top: 21px solid transparent;
+          border-bottom: 22px solid transparent;
+          border-left: 12px solid $white;
+          top: -9px;
+          right: -23px;
+        }
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+
+  &.bg-danger,
+  &.bg-dark,
+  &.bg-info,
+  &.bg-primary,
+  &.bg-success,
+  &.bg-warning {
+    border: none;
+
+    .breadcrumb-item {
+      color: $breadcrumb-item-color;
+
+      &:before {
+        color: inherit;
+      }
+
+      a,
+      span {
+        color: inherit;
+      }
+    }
+  }
+}
+
+/* inverse breadcrumb */
+
+@each $color,
+$value in $theme-colors {
+  .bg-inverse-#{$color} {
+    @include breadcrumb-inverse-variant($value);
+  }
+}

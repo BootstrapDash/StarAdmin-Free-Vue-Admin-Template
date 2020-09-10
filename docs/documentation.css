@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: 'Fira Sans', Arial, sans-serif;
+  background-color: #fff;
+  color: #585c64;
+}
+
+a {
+  text-decoration: none;
+  color: #0866C6;
+}
+
+a:hover,
+a:focus {
+  color: #444;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+p {
+  margin-top: 0;
+}
+
+code {
+  background: #f7f7f7;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #dc6464;
+  margin: 0 5px;
+}
+
+.main-wrapper {
+  margin-left: 260px;
+}
+
+.left-panel {
+  width: 260px;
+  padding: 20px 25px;
+  background-color: #f7f7f7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.left-panel .logo {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 20px;
+  letter-spacing: -1px;
+  color: #282c35;
+}
+
+.left-panel .logo span {
+  color: #8e9197;
+  font-weight: 400;
+}
+
+.main-panel {
+  padding: 40px 50px;
+}
+
+.title-label {
+  text-transform: uppercase;
+  color: inherit;
+  margin: 0 0 15px;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+.left-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.left-menu li+li {
+  margin-top: 2px;
+}
+
+.section-title {
+  margin: 0;
+  font-weight: 500;
+  color: #282c35;
+}
+
+.section-subtitle {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #282c35;
+  line-height: 1;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table th {
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 7px 20px;
+  text-align: left;
+  background-color: #f7f7f7;
+}
+
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+.table tbody tr td:first-child {
+  font-weight: 500;
+  color: #333;
+}
+
+.table-code tbody tr td:first-child {
+  font-weight: normal;
+  color: inherit;
+  vertical-align: top;
+}
+
+.tx-muted {
+  color: #999;
+}
+
+.tx-dark {
+  color: #333;
+}
+
+.tx-red {
+  color: #cc0000;
+}
+
+.tx-medium {
+  font-weight: 500;
+}
+
+.pre-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  margin-bottom: 10px;
+}
+
+.pre-wrapper pre {
+  margin: 0;
+}
+
+/* Utilities */
+.mg-t-10 {
+  margin-top: 10px;
+}
+
+.mg-t-40 {
+  margin-top: 40px;
+}
+
+.wd-20p {
+  width: 20%;
+}
+
+.wd-30p {
+  width: 30%;
+}
+
+.wd-80p {
+  width: 80%;
+}
+
+.wd-70p {
+  width: 70%;
+}
+
+.valign-top {
+  vertical-align: top;
+}
