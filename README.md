@@ -9,9 +9,9 @@ This remarkably flexible and highly customizable template helps you create an am
 
 ## Demo
 
-Visit: https://www.bootstrapdash.com/demo/star-admin-vue/
+Visit: https://www.bootstrapdash.com/demo/star-admin-vue/preview/
 
-[![N|Solid](screenshot.jpg)](http://www.bootstrapdash.com/demo/star-admin-vue)
+[![N|Solid](screenshot.jpg)](https://www.bootstrapdash.com/demo/star-admin-vue/preview/)
 
 ## Installation
 
@@ -21,9 +21,11 @@ Within the download you'll find the following directories and files, logically g
 
 ```
 StarAdmin-Free-Vue-Admin-Template/
-├── source/
-├── static/
+├── demo_1/
+├── docs/
+├── static
 ├── index.html
+├── LICENCE
 ├── README.md
 ├── screenshot.jpg
 
@@ -36,7 +38,7 @@ StarAdmin-Free-Vue-Admin-Template/
 $ git clone https://github.com/BootstrapDash/StarAdmin-Free-Vue-Admin-Template.git
 
 # go into app's directory
-$ cd StarAdmin-Free-Vue-Admin-Template/source/
+$ cd StarAdmin-Free-Vue-Admin-Template/demo_1/
 
 # install dependencies
 npm install

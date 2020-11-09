@@ -3,7 +3,7 @@
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_URI} !(demo/star-admin-vue/) [NC]
+RewriteCond %{REQUEST_URI} !(demo/star-admin-vue/preview/) [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
@@ -13,7 +13,7 @@ RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
 RewriteRule ^ - [L]
 
 # If the requested resource doesn't exist, use index.html
-RewriteRule ^ /demo/star-admin-vue/index.html
+RewriteRule ^ /demo/star-admin-vue/preview/index.html
 </IfModule>
 
 # END WordPress

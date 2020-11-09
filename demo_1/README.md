@@ -1,4 +1,4 @@
-# star-admin
+# star-admin-pro-vue
 
 > A Vue.js project
 

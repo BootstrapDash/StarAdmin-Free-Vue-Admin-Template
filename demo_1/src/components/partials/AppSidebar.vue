@@ -109,7 +109,7 @@
           </b-collapse>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.bootstrapdash.com/demo/star-admin-vue/docs/documentation.html">
+          <a class="nav-link" href="https://www.bootstrapdash.com/product/star-admin-vue/docs/documentation.html">
             <i class="menu-icon typcn typcn-document-add"></i>
             <span class="menu-title">Doc</span>
           </a>
