@@ -100,7 +100,7 @@
     "sass-loader": "^7.1.0",
     "selenium-server": "^3.0.1",
     "semver": "^5.7.0",
-    "shelljs": "^0.7.6",
+    "shelljs": "^0.8.5",
     "sinon": "^4.0.0",
     "sinon-chai": "^2.8.0",
     "uglifyjs-webpack-plugin": "^1.1.1",
